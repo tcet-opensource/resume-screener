@@ -1,0 +1,11 @@
+pandas
+base64
+time
+random
+datetime
+pyresparser
+os
+pdfminer3
+io
+streamlit_tags
+nltk
