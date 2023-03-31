@@ -11,6 +11,9 @@ from pdfminer3.pdfinterp import PDFResourceManager
 from pdfminer3.pdfinterp import PDFPageInterpreter
 from pdfminer3.converter import TextConverter
 import io,random
+from streamlit_tags import st_tags
+from Skills import ds_keyword,web_keyword,android_keyword,ios_keyword,uiux_keyword,n_any
+from Recommendations import web_skills,ds_skills,ios_skills,android_skills,uiux_skills,no_skills
 import nltk
 nltk.download('stopwords')
 
@@ -21,6 +24,13 @@ st.set_page_config(
 )
 
 def main():
+    img = Image.open('./imgs/design.jpg')
+    resized_img = img.resize((300, 300))
+    container = st.container()
+    with container:
+        col1, col2, col3 = st.columns([1, 2, 1])
+    col2.image(resized_img, use_column_width=True)
+    
     activities = ["User", "Admin"]
     choice = st.sidebar.selectbox("Choose among the given options:", activities, key="level_select")
     return choice
@@ -58,7 +68,7 @@ def User():
     ## file upload in pdf format
     pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
     if pdf_file is not None:
-        with st.spinner('Hang On While We Cook Magic For You...'):
+        with st.spinner('Processing your information...'):
             time.sleep(4)
     
     ### saving the uploaded resume to local folder
@@ -73,7 +83,7 @@ def User():
             
             
             resume_text = pdf_reader(save_image_path)
-
+            print(resume_text)
         
             st.header("**Resume Analysis 📄**")
             # st.write("Hello "+ resume_data['name'])
@@ -87,6 +97,101 @@ def User():
 
             except:
                 pass
+            keywords = {
+                'INTERNSHIP': 'Intermediate',
+                'INTERNSHIPS': 'Intermediate',
+                'Internship': 'Intermediate',
+                'Internships': 'Intermediate',
+                'EXPERIENCE': 'Experienced',
+                'WORK EXPERIENCE': 'Experienced',
+                'Experience': 'Experienced',
+                'Work Experience': 'Experienced',
+            }
+
+            cand_level = ''
+            for key, value in keywords.items():
+                if key in resume_text:
+                    cand_level = value
+                    break
+
+            if not cand_level:
+                cand_level = 'Beginner'
+
+            color = {
+                'Intermediate': '#1ed760',
+                'Experienced': '#fba171',
+                'Fresher': '#d73b5c'
+            }
+
+            st.markdown(f'''<h4 style='text-align: left; color: {color[cand_level]};'>You are at {cand_level.lower()} level!</h4>''', unsafe_allow_html=True)
+            ### Skill Recommendations Starts
+            # st.subheader("**Skills Recommendation**")                
+            recommended_skills = []
+            reco_field = ''
+            rec_course = ''
+
+            ### condition starts to check skills from keywords and predict 
+            for i in resume_data['skills']:
+            
+                #### Data science recommendation
+                if i.lower() in ds_keyword:
+                    print(i.lower())
+                    reco_field = 'Data Science'
+                    st.success("** Our analysis says you are looking for Data Science Jobs.**")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Recommended skills generated from System',value=ds_skills,key = '2')
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job</h5>''',unsafe_allow_html=True)
+                    break
+
+                #### Web development recommendation
+                elif i.lower() in web_keyword:
+                    print(i.lower())
+                    reco_field = 'Web Development'
+                    st.success("** Our analysis says you are looking for Web Development Jobs **")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Recommended skills generated from System',value=web_skills,key = '3')
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    break
+
+                #### Android App Development
+                elif i.lower() in android_keyword:
+                    print(i.lower())
+                    reco_field = 'Android Development'
+                    st.success("** Our analysis says you are looking for Android App Development Jobs **")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Recommended skills generated from System',value=android_skills,key = '4')
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    break
+
+                #### IOS App Development
+                elif i.lower() in ios_keyword:
+                    print(i.lower())
+                    reco_field = 'IOS Development'
+                    st.success("** Our analysis says you are looking for IOS App Development Jobs **")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Recommended skills generated from System',value=ios_skills,key = '5')
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    break
+
+                #### Ui-UX Recommendation
+                elif i.lower() in uiux_keyword:
+                    print(i.lower())
+                    reco_field = 'UI-UX Development'
+                    st.success("** Our analysis says you are looking for UI-UX Development Jobs **")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Recommended skills generated from System',value=uiux_skills,key = '6')
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    break
+
+                #### For Not Any Recommendations
+                elif i.lower() in n_any:
+                    print(i.lower())
+                    reco_field = 'NA'
+                    st.warning("** Currently our tool only predicts and recommends for Data Science, Web, Android, IOS and UI/UX Development**")
+                    recommended_keywords = st_tags(label='### Recommended skills for you.',
+                    text='Currently No Recommendations',value=no_skills,key = '6')
+                    st.markdown('''<h5 style='text-align: left; color: #092851;'>Maybe Available in Future Updates</h5>''',unsafe_allow_html=True)
+                    break
 
    
 def Admin():
