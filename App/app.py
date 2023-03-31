@@ -14,6 +14,7 @@ import io,random
 from streamlit_tags import st_tags
 from Skills import ds_keyword,web_keyword,android_keyword,ios_keyword,uiux_keyword,n_any
 from Recommendations import web_skills,ds_skills,ios_skills,android_skills,uiux_skills,no_skills
+from Courses import ds_course,web_course,android_course,ios_course,uiux_course
 import nltk
 nltk.download('stopwords')
 
@@ -38,6 +39,21 @@ def main():
 def User():
     st.write('Welcome to user panel')
     st.markdown('''<h5 style='text-align: left; color: #70FA79;'> Upload Your Resume </h5>''',unsafe_allow_html=True)
+    
+    # course recommendations from Courses.py
+    def course_recommender(course_list):
+        st.subheader("**Courses & Certificates Recommendations📖**")
+        c = 0
+        rec_course = []
+        no_of_reco = st.slider('Choose Number of Course Recommendations:', 1, 10, 5)
+        random.shuffle(course_list)
+        for c_name, c_link in course_list:
+            c += 1
+            st.markdown(f"({c}) [{c_name}]({c_link})")
+            rec_course.append(c_name)
+            if c == no_of_reco:
+                break
+        return rec_course
     
     # Reads Pdf file and checks extraction
     def pdf_reader(file):
@@ -140,17 +156,19 @@ def User():
                     st.success("** Our analysis says you are looking for Data Science Jobs.**")
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Recommended skills generated from System',value=ds_skills,key = '2')
-                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job</h5>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost the chances of getting a Job</h5>''',unsafe_allow_html=True)
+                    rec_course = course_recommender(ds_course)
                     break
 
                 #### Web development recommendation
                 elif i.lower() in web_keyword:
                     print(i.lower())
                     reco_field = 'Web Development'
-                    st.success("** Our analysis says you are looking for Web Development Jobs **")
+                    st.success("**Our analysis says you are looking for Web Development Jobs**")
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Recommended skills generated from System',value=web_skills,key = '3')
-                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    rec_course = course_recommender(web_course)
                     break
 
                 #### Android App Development
@@ -160,7 +178,8 @@ def User():
                     st.success("** Our analysis says you are looking for Android App Development Jobs **")
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Recommended skills generated from System',value=android_skills,key = '4')
-                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    rec_course = course_recommender(android_course)
                     break
 
                 #### IOS App Development
@@ -170,17 +189,19 @@ def User():
                     st.success("** Our analysis says you are looking for IOS App Development Jobs **")
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Recommended skills generated from System',value=ios_skills,key = '5')
-                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    rec_course = course_recommender(ios_course)
                     break
 
                 #### Ui-UX Recommendation
                 elif i.lower() in uiux_keyword:
                     print(i.lower())
                     reco_field = 'UI-UX Development'
-                    st.success("** Our analysis says you are looking for UI-UX Development Jobs **")
+                    st.success("**Our analysis says you are looking for UI-UX Development Jobs**")
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Recommended skills generated from System',value=uiux_skills,key = '6')
-                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost🚀 the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #1ed760;'>Adding this skills to resume will boost the chances of getting a Job💼</h5>''',unsafe_allow_html=True)
+                    rec_course = course_recommender(uiux_course)
                     break
 
                 #### For Not Any Recommendations
@@ -191,6 +212,7 @@ def User():
                     recommended_keywords = st_tags(label='### Recommended skills for you.',
                     text='Currently No Recommendations',value=no_skills,key = '6')
                     st.markdown('''<h5 style='text-align: left; color: #092851;'>Maybe Available in Future Updates</h5>''',unsafe_allow_html=True)
+                    rec_course = "Sorry! Not Available for this Field"
                     break
 
    
