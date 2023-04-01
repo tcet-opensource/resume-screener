@@ -9,3 +9,4 @@ pdfminer3
 io
 streamlit_tags
 nltk
+streamlit
