@@ -1,7 +1,8 @@
-from flask import request, jsonify
-from . import bp
+from flask import Blueprint, jsonify
 
-@bp.route("/upload-resume", methods=["POST"])
+upload_resume_bp = Blueprint('upload_resume', __name__)
+
+@upload_resume_bp.route("/upload-resume", methods=["POST"])
 def upload_resume():
     # Code to handle resume upload from user end
     return jsonify({"message": "Resume uploaded successfully."})

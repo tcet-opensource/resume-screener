@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
@@ -9,9 +9,12 @@ app.register_blueprint(upload_resume_bp)
 from routes.get_resume_data import get_resume_data_bp
 app.register_blueprint(get_resume_data_bp)
 
-from routes.recommended_courses import recommended_courses
-app.register_blueprint(recommended_courses)
+from routes.recommend_courses import recommend_courses_bp
+app.register_blueprint(recommend_courses_bp)
 
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
