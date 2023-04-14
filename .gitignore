@@ -1,0 +1,20 @@
+# Python-related files
+*.pyc
+*.pyo
+__pycache__/
+*.pkl 
+
+# Log files
+*.log
+
+# SQLite database files
+*.db
+
+# Other sensitive or confidential data
+config.py
+credentials.json
+.env
+
+# Virtual environment files (pls name your virtualenv as venv)
+venv/
+
