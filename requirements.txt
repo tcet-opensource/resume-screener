@@ -1,0 +1,5 @@
+# all the necessary requirements will be listed here import them using pip install requirements.txt
+# dont use pip freeze instead use pipreqs --force /path/to/project to update the dependencies
+
+Flask==2.2.3
+pipreqs==0.4.13
