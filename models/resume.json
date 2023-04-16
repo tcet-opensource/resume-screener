@@ -1,0 +1,90 @@
+{
+    "internships": [
+      {
+        "title": "Software Engineering Intern",
+        "company": "ABC Corporation",
+        "start_date": "2022-06-01",
+        "end_date": "2022-08-31"
+      },
+      {
+        "title": "Data Science Intern",
+        "company": "XYZ Inc.",
+        "start_date": "2021-06-01",
+        "end_date": "2021-08-31"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science",
+        "major": "Computer Science",
+        "university": "Thakur College of Engineering, Mumbai",
+        "graduation_date": "2023-06-15"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Personal Finance Tracker",
+        "description": "An app that tracks personal finance using machine learning",
+        "technologies": ["Python", "JavaScript", "React"]
+      },
+      {
+        "title": "Online Marketplace",
+        "description": "A web app that enables users to buy and sell goods online",
+        "technologies": ["Java", "Spring Boot", "MySQL"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Python",
+        "experience": "Advanced"
+      },
+      {
+        "name": "JavaScript",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "Java",
+        "experience": "Expert"
+      },
+      {
+        "name": "SQL",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "React",
+        "experience": "Intermediate"
+      },
+      {
+        "name": "Node.js",
+        "experience": "Intermediate"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Machine Learning",
+        "institution": "Stanford University",
+        "completion_date": "2021-12-15"
+      },
+      {
+        "title": "Data Structures and Algorithms",
+        "institution": "Massachusetts Institute of Technology",
+        "completion_date": "2022-05-15"
+      },
+      {
+        "title": "Database Systems",
+        "institution": "University of California, Berkeley",
+        "completion_date": "2022-12-15"
+      },
+      {
+        "title": "Web Development",
+        "institution": "Harvard University",
+        "completion_date": "2023-06-15"
+      }
+    ]
+}
+  
+  
+  
+  
+  
+  
