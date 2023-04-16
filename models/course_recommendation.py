@@ -69,5 +69,5 @@ print(similar_course)
 
 data = {"similar_course": similar_course}
 
-with open("output.json", "w") as f:
+with open("reccomended_course.json", "w") as f:
     json.dump(data, f, indent=4)

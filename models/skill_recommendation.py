@@ -70,5 +70,5 @@ print(similar_skills)
 
 data = {"similar_skills": similar_skills}
 
-with open("output.json", "w") as f:
+with open("recommend_skills.json", "w") as f:
     json.dump(data, f, indent=4)
