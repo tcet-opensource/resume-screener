@@ -6,10 +6,13 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import sys
+
+sys.path.append("data")
 from skills import skills_list
 from resume_data import resume_data_list
 
-with open("resume.json", "r") as f:
+with open("data/resume.json", "r") as f:
     data = json.load(f)
 
 nltk.download("stopwords")
@@ -70,5 +73,5 @@ print(similar_skills)
 
 data = {"similar_skills": similar_skills}
 
-with open("recommend_skills.json", "w") as f:
+with open("data/recommend_skills.json", "w") as f:
     json.dump(data, f, indent=4)
