@@ -7,71 +7,59 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import sys
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+from model_data.skills import skills_list
+from model_data.resume_data import resume_data_list
+from model_data.discription import discription_list
 
-sys.path.append("data")
-from skills import skills_list
-from resume_data import resume_data_list
-
-with open("data/resume.json", "r") as f:
+with open("models/json_data/resume.json", "r") as f:
     data = json.load(f)
 
-nltk.download("stopwords")
-nltk.download("wordnet")
-stop_words = set(stopwords.words("english"))
-stemmer = PorterStemmer()
-lemmatizer = WordNetLemmatizer()
-vectorizer = TfidfVectorizer(stop_words="english")
-
-resume_data = resume_data_list
-
 skills = skills_list
+discription = discription_list
 project_skills = []
 for project in data["projects"]:
     project_skills.extend(project["technologies"])
 for skill in data["skills"]:
     project_skills.append(skill["name"])
+print(project_skills)
 
 
-def preprocess_text(text):
-    text = text.translate(str.maketrans("", "", string.punctuation))
-    tokens = nltk.word_tokenize(text.lower())
-    tokens = [token for token in tokens if token not in stop_words]
-    stems = [stemmer.stem(token) for token in tokens]
-    lemmas = [lemmatizer.lemmatize(token) for token in tokens]
+skill_data = pd.DataFrame({"skill": skills, "description": discription})
 
-    return stems, lemmas
+tfidf_vectorizer = TfidfVectorizer(stop_words="english")
+tfidf_skills = tfidf_vectorizer.fit_transform(skill_data["description"])
+skill_vectors = tfidf_vectorizer.fit_transform(project_skills)
 
-
-preprocessed_resume_data = []
-for resume in resume_data:
-    stems, lemmas = preprocess_text(resume)
-    preprocessed_resume_data.append(" ".join(lemmas))
-
-preprocessed_skill_list = []
-for skill in project_skills:
-    stems, lemmas = preprocess_text(skill)
-    preprocessed_skill_list.append(" ".join(lemmas))
-
-vectorizer.fit(preprocessed_resume_data)
-resume_data_vectorized = vectorizer.transform(preprocessed_resume_data)
-skill_list_vectorized = vectorizer.transform(preprocessed_skill_list)
-skill_vectors = vectorizer.transform(skills)
+knn_model = NearestNeighbors(metric="cosine", algorithm="brute", n_neighbors=5)
+knn_model.fit(tfidf_skills)
 
 
-def recommend_similar_skills(skill_name, skill_vectors, tfidf_vectorizer, top_n=10):
-    skill_vector = tfidf_vectorizer.transform([skill_name])
-    cosine_similarities = cosine_similarity(skill_vector, skill_vectors)
-    similar_skill_indices = cosine_similarities.argsort()[0][-top_n - 1 : -1][::-1]
-    similar_skills = [skills[i] for i in similar_skill_indices]
+def create_skill_list(skills_list, n_neighbors):
+    similar_skills_dict = {}
+    for skill in skills_list:
+        try:
+            recommended_skills = recommend_similar_skills(skill, n_neighbors)
+        except IndexError:
+            recommended_skills = ["Not available in database"]
+        similar_skills_dict[skill] = recommended_skills
+    return similar_skills_dict
+
+
+def recommend_similar_skills(skill_name, n_neighbors):
+    skill_index = skill_data[skill_data["skill"] == skill_name].index[0]
+
+    skill_vector = tfidf_skills[skill_index]
+    _, indices = knn_model.kneighbors(skill_vector, n_neighbors)
+    similar_skills = []
+    for index in indices[0]:
+        if index != skill_index:
+            similar_skills.append(skill_data["skill"][index])
     return similar_skills
 
 
-similar_skills = recommend_similar_skills(
-    "Civil Engineering Construction", skill_vectors, vectorizer
-)
-print(similar_skills)
+similar_skills = create_skill_list(project_skills, n_neighbors=5)
 
-data = {"similar_skills": similar_skills}
-
-with open("data/recommend_skills.json", "w") as f:
-    json.dump(data, f, indent=4)
+with open("models/json_data/similar_skills.json", "w") as f:
+    json.dump({"similar_skills": similar_skills}, f, indent=4)
