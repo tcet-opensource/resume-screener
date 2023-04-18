@@ -14,7 +14,11 @@ def get_data(
         data = json.load(f)
     courses = []
     for course in data["courses"]:
-        courses.append(course["title"])
+        if course["title"].find("-") != -1:
+            courses.append(course["title"][: course["title"].find("-") - 1])
+        else:
+            courses.append(course["title"])
+    print("courses: ", courses)
     return course_data, courses
 
 

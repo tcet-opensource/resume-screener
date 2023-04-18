@@ -61,24 +61,19 @@
     ],
     "courses": [
       {
-        "title": "Machine Learning",
-        "institution": "Stanford University",
-        "completion_date": "2021-12-15"
+        "title": "Machine Learning - Udemy"
       },
       {
-        "title": "Data Structures and Algorithms",
-        "institution": "Massachusetts Institute of Technology",
-        "completion_date": "2022-05-15"
+        "title": "Nosql basics- ScyllaDb"
       },
       {
-        "title": "Digital Marketing",
-        "institution": "University of California, Berkeley",
-        "completion_date": "2022-12-15"
+        "title": "Python development - FOSSEE"
       },
       {
-        "title": "Full Stack Web Developer",
-        "institution": "Harvard University",
-        "completion_date": "2023-06-15"
+        "title": "Deep Learning"
+      },
+      {
+        "title": "Microsoft Azure fundamentals - Reskilll"
       }
     ]
 }

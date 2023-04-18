@@ -6,23 +6,20 @@
             "Intro to Machine Learning with TensorFlow",
             "Intro to HTML and CSS"
         ],
-        "Data Structures and Algorithms": [
-            "Data Visualization in Tableau",
-            "Data Science Interview Prep",
-            "Data Structures & Algorithms in Swift",
-            "Oracle Cloud Infrastructure Architect Professional"
+        "Nosql basic": [
+            "Not available in database"
         ],
-        "Digital Marketing": [
-            "UX Designer",
-            "Cloud Architect using Microsoft Azure",
-            "Computer Vision",
-            "Security Engineer"
+        "Python development": [
+            "Not available in database"
         ],
-        "Full Stack Web Developer": [
-            "Front End Web Developer",
-            "Oracle Cloud Infrastructure Operations Professional",
-            "Advanced Android with Kotlin",
-            "UX Design for Mobile Developers"
+        "Deep Learning": [
+            "Intro to Deep Learning with PyTorch",
+            "Deep Reinforcement Learning",
+            "Intro to Machine Learning with PyTorch",
+            "Intro to Machine Learning with TensorFlow"
+        ],
+        "Microsoft Azure fundamentals": [
+            "Not available in database"
         ]
     }
 }
