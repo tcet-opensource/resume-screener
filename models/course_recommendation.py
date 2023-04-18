@@ -1,76 +1,54 @@
 import json
-import string
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer, WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-import sys
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
 
-# sys.path.append("model_data")
-from model_data.course_list import engineering_courses
-from model_data.resume_data import resume_data_list
+course_data = pd.read_csv(
+    "models/model_data/dataset/course_recommendation/preprocessed_data.csv"
+)
 
 with open("models/json_data/resume.json", "r") as f:
     data = json.load(f)
 
-nltk.download("stopwords")
-nltk.download("wordnet")
-stop_words = set(stopwords.words("english"))
-stemmer = PorterStemmer()
-lemmatizer = WordNetLemmatizer()
-vectorizer = TfidfVectorizer(stop_words="english")
 
-resume_data = resume_data_list
-
-engineering_courses = engineering_courses
-resume_courses = []
-
-for courses in data["courses"]:
-    resume_courses.append(courses["title"])
+courses = []
+for course in data["courses"]:
+    courses.append(course["title"])
+print(courses)
 
 
-def preprocess_text(text):
-    text = text.translate(str.maketrans("", "", string.punctuation))
-    tokens = nltk.word_tokenize(text.lower())
-    tokens = [token for token in tokens if token not in stop_words]
-    stems = [stemmer.stem(token) for token in tokens]
-    lemmas = [lemmatizer.lemmatize(token) for token in tokens]
+tfidf_vectorizer = TfidfVectorizer(stop_words="english")
+tfidf_skills = tfidf_vectorizer.fit_transform(course_data["Description"])
+skill_vectors = tfidf_vectorizer.fit_transform(courses)
 
-    return stems, lemmas
+knn_model = NearestNeighbors(metric="cosine", algorithm="brute", n_neighbors=5)
+knn_model.fit(tfidf_skills)
 
 
-preprocessed_resume_data = []
-for resume in resume_data:
-    stems, lemmas = preprocess_text(resume)
-    preprocessed_resume_data.append(" ".join(lemmas))
-
-preprocessed_resume_courses = []
-for course in resume_courses:
-    stems, lemmas = preprocess_text(course)
-    preprocessed_resume_courses.append(" ".join(lemmas))
-
-vectorizer.fit(preprocessed_resume_data)
-resume_data_vectorized = vectorizer.transform(preprocessed_resume_data)
-resume_courses_vectorized = vectorizer.transform(preprocessed_resume_courses)
-engineering_courses_vectorized = vectorizer.transform(engineering_courses)
+def create_course_list(courses_list, n_neighbors):
+    similar_courses_dict = {}
+    for course in courses_list:
+        try:
+            recommended_courses = recommend_similar_courses(course, n_neighbors)
+        except IndexError:
+            recommended_courses = ["Not available in database"]
+        similar_courses_dict[course] = recommended_courses
+    return similar_courses_dict
 
 
-def recommend_similar_course(course_name, course_vectors, tfidf_vectorizer, top_n=10):
-    course_vector = tfidf_vectorizer.transform([course_name])
-    cosine_similarities = cosine_similarity(course_vector, course_vectors)
-    similar_course_indices = cosine_similarities.argsort()[0][-top_n - 1 : -1][::-1]
-    similar_courses = [engineering_courses[i] for i in similar_course_indices]
+def recommend_similar_courses(course_name, n_neighbors):
+    course_index = course_data[course_data["Title"] == course_name].index[0]
+
+    course_vector = tfidf_skills[course_index]
+    _, indices = knn_model.kneighbors(course_vector, n_neighbors)
+    similar_courses = []
+    for index in indices[0]:
+        if index != course_index:
+            similar_courses.append(course_data["Title"][index])
     return similar_courses
 
 
-similar_course = recommend_similar_course(
-    "Web Development", engineering_courses_vectorized, vectorizer
-)
-print(similar_course)
+similar_courses = create_course_list(courses, n_neighbors=5)
 
-data = {"similar_course": similar_course}
-
-with open("models/json_data/reccomended_course.json", "w") as f:
-    json.dump(data, f, indent=4)
+with open("models/json_data/similar_courses.json", "w") as f:
+    json.dump({"similar_courses": similar_courses}, f, indent=4)

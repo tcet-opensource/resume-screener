@@ -1,16 +1,8 @@
 import json
-import string
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer, WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-import sys
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from model_data.skills import skills_list
-from model_data.resume_data import resume_data_list
 from model_data.discription import discription_list
 
 with open("models/json_data/resume.json", "r") as f:

@@ -1,0 +1,28 @@
+{
+    "similar_courses": {
+        "Machine Learning": [
+            "Introduction to Graduate Algorithms",
+            "Intro to Machine Learning with PyTorch",
+            "Intro to Machine Learning with TensorFlow",
+            "Intro to HTML and CSS"
+        ],
+        "Data Structures and Algorithms": [
+            "Data Visualization in Tableau",
+            "Data Science Interview Prep",
+            "Data Structures & Algorithms in Swift",
+            "Oracle Cloud Infrastructure Architect Professional"
+        ],
+        "Digital Marketing": [
+            "UX Designer",
+            "Cloud Architect using Microsoft Azure",
+            "Computer Vision",
+            "Security Engineer"
+        ],
+        "Full Stack Web Developer": [
+            "Front End Web Developer",
+            "Oracle Cloud Infrastructure Operations Professional",
+            "Advanced Android with Kotlin",
+            "UX Design for Mobile Developers"
+        ]
+    }
+}
