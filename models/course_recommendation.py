@@ -2,27 +2,30 @@ import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
-
-course_data = pd.read_csv(
-    "models/model_data/dataset/course_recommendation/preprocessed_data.csv"
-)
-
-with open("models/json_data/resume.json", "r") as f:
-    data = json.load(f)
+import pickle
 
 
-courses = []
-for course in data["courses"]:
-    courses.append(course["title"])
-print(courses)
+def get_data(
+    data_path="models/model_data/dataset/course_recommendation/preprocessed_data.csv",
+    resume_path="models/json_data/resume.json",
+):
+    course_data = pd.read_csv(data_path)
+    with open(resume_path, "r") as f:
+        data = json.load(f)
+    courses = []
+    for course in data["courses"]:
+        courses.append(course["title"])
+    return course_data, courses
 
 
-tfidf_vectorizer = TfidfVectorizer(stop_words="english")
-tfidf_skills = tfidf_vectorizer.fit_transform(course_data["Description"])
-skill_vectors = tfidf_vectorizer.fit_transform(courses)
-
-knn_model = NearestNeighbors(metric="cosine", algorithm="brute", n_neighbors=5)
-knn_model.fit(tfidf_skills)
+def get_model():
+    course_data, courses = get_data()
+    tfidf_vectorizer = TfidfVectorizer(stop_words="english")
+    tfidf_skills = tfidf_vectorizer.fit_transform(course_data["Description"])
+    skill_vectors = tfidf_vectorizer.fit_transform(courses)
+    knn_model = NearestNeighbors(metric="cosine", algorithm="brute", n_neighbors=5)
+    knn_model.fit(tfidf_skills)
+    return knn_model, course_data, courses, tfidf_skills, skill_vectors
 
 
 def create_course_list(courses_list, n_neighbors):
@@ -37,6 +40,7 @@ def create_course_list(courses_list, n_neighbors):
 
 
 def recommend_similar_courses(course_name, n_neighbors):
+    knn_model, course_data, _, tfidf_skills, _ = get_model()
     course_index = course_data[course_data["Title"] == course_name].index[0]
 
     course_vector = tfidf_skills[course_index]
@@ -48,7 +52,18 @@ def recommend_similar_courses(course_name, n_neighbors):
     return similar_courses
 
 
-similar_courses = create_course_list(courses, n_neighbors=5)
+def get_predictions(file_path="models/json_data/similar_courses.json"):
+    _, _, courses, _, _ = get_model()
+    similar_courses = create_course_list(courses, n_neighbors=5)
+    with open(file_path, "w") as f:
+        json.dump({"similar_courses": similar_courses}, f, indent=4)
 
-with open("models/json_data/similar_courses.json", "w") as f:
-    json.dump({"similar_courses": similar_courses}, f, indent=4)
+
+def save_model(file_path="models\pickled_models\course_model.pkl"):
+    knn_model, _, _, _, _ = get_model()
+    pickle.dump(knn_model, open(file_path, "wb"))
+
+
+if __name__ == "__main__":
+    get_predictions()
+    save_model()
