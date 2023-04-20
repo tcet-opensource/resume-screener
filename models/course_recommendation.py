@@ -5,7 +5,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 import string
-from model_data.course_list import engineering_courses
+from model_data.dataset.course_recommendation.course_list import engineering_courses
 
 
 class CourseRecommendation:
@@ -62,8 +62,9 @@ class CourseRecommendation:
             except IndexError:
                 try:
                     recommended_courses = self.recommend_similar_course_sim(course)
-                except ValueError:
-                    recommended_courses = ["Not available in database"]
+                except Exception as e:
+                    print(f"The following error occuerd: {e}")
+                    recommended_courses = []
             similar_courses_dict[course] = recommended_courses
         return similar_courses_dict
 
@@ -99,7 +100,6 @@ class CourseRecommendation:
     def get_predictions(self):
         _, _, courses, _, _ = self.get_model()
         similar_courses = self.create_course_list(courses)
-        print(similar_courses)
         with open(self.preds_path, "w") as f:
             json.dump({"similar_courses": similar_courses}, f, indent=4)
 

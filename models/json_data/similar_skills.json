@@ -2,48 +2,32 @@
     "similar_skills": {
         "Python": [
             "Python programming",
-            "Java programming",
-            "Java",
-            "C++"
+            "Java programming"
         ],
         "JavaScript": [
             "HTML",
-            "AngularJS",
-            "Web development",
-            "Node.js"
+            "AngularJS"
         ],
         "React": [
             "UI/UX design",
-            "AngularJS",
-            "Node.js",
-            "Frontend development"
+            "AngularJS"
         ],
         "Java": [
             "Java programming",
-            "Python programming",
-            "Python",
-            "C++"
+            "Python programming"
         ],
         "Spring Boot": [
             "Django",
-            "AngularJS",
-            "Flask",
-            "Java"
+            "AngularJS"
         ],
-        "MySQL": [
-            "Not available in database"
-        ],
+        "MySQL": [],
         "SQL": [
             "Cloud computing",
-            "Database management",
-            "Natural language processing",
-            "Python"
+            "Database management"
         ],
         "Node.js": [
             "AngularJS",
-            "JavaScript",
-            "React",
-            "Kubernetes"
+            "JavaScript"
         ]
     }
 }
