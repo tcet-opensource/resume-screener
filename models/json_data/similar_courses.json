@@ -1,24 +1,57 @@
 {
     "similar_courses": {
-        "Machine Learning": [
-            "Introduction to Graduate Algorithms",
-            "Intro to Machine Learning with PyTorch",
-            "Intro to Machine Learning with TensorFlow",
-            "Intro to HTML and CSS"
+        "machine learning": [
+            "introduction to graduate algorithms",
+            "intro to machine learning with pytorch",
+            "intro to machine learning with tensorflow",
+            "intro to html and css"
         ],
-        "Nosql basic": [
+        "machine": [
             "Not available in database"
         ],
-        "Python development": [
+        "learning": [
             "Not available in database"
         ],
-        "Deep Learning": [
-            "Intro to Deep Learning with PyTorch",
-            "Deep Reinforcement Learning",
-            "Intro to Machine Learning with PyTorch",
-            "Intro to Machine Learning with TensorFlow"
+        "nosql basic": [
+            "Not available in database"
         ],
-        "Microsoft Azure fundamentals": [
+        "nosql": [
+            "Not available in database"
+        ],
+        "basic": [
+            "Not available in database"
+        ],
+        "python development": [
+            "Not available in database"
+        ],
+        "python": [
+            "Not available in database"
+        ],
+        "development": [
+            "Not available in database"
+        ],
+        "embedded systems": [
+            "full stack javascript developer",
+            "introduction to tensorflow lite",
+            "big data analytics in healthcare",
+            "flying car and autonomous flight engineer"
+        ],
+        "embedded": [
+            "Not available in database"
+        ],
+        "systems": [
+            "Not available in database"
+        ],
+        "microsoft azure fundamentals": [
+            "Not available in database"
+        ],
+        "microsoft": [
+            "Not available in database"
+        ],
+        "azure": [
+            "Not available in database"
+        ],
+        "fundamentals": [
             "Not available in database"
         ]
     }
