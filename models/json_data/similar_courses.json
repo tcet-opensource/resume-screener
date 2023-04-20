@@ -7,28 +7,60 @@
             "intro to html and css"
         ],
         "machine": [
-            "Not available in database"
+            "data engineering with aws",
+            "oracle cloud infrastructure foundations",
+            "oracle cloud infrastructure architect professional",
+            "oracle cloud infrastructure architect associate",
+            "oracle autonomous database administration"
         ],
         "learning": [
-            "Not available in database"
+            "data engineering with aws",
+            "time series forecasting",
+            "segmentation and clustering",
+            "product design",
+            "classification models"
         ],
         "nosql basic": [
-            "Not available in database"
+            "data engineering with aws",
+            "getting started with google workspace",
+            "data analysis and visualization",
+            "spark",
+            "sql for data analysis"
         ],
         "nosql": [
-            "Not available in database"
+            "design of computer programs",
+            "mobile design and usability for android",
+            "google maps apis",
+            "how to make an ios app",
+            "firebase analytics: android"
         ],
         "basic": [
-            "Not available in database"
+            "design of computer programs",
+            "mobile design and usability for android",
+            "google maps apis",
+            "how to make an ios app",
+            "firebase analytics: android"
         ],
         "python development": [
-            "Not available in database"
+            "data engineering with aws",
+            "product design",
+            "classification models",
+            "problem solving with advanced analytics",
+            "creating an analytical dataset"
         ],
         "python": [
-            "Not available in database"
+            "data engineering with aws",
+            "oracle autonomous database administration",
+            "managing remote teams with upwork",
+            "get your startup started",
+            "how to build a startup"
         ],
         "development": [
-            "Not available in database"
+            "data engineering with aws",
+            "getting started with google workspace",
+            "data analysis and visualization",
+            "spark",
+            "sql for data analysis"
         ],
         "embedded systems": [
             "full stack javascript developer",
@@ -37,22 +69,46 @@
             "flying car and autonomous flight engineer"
         ],
         "embedded": [
-            "Not available in database"
+            "data engineering with aws",
+            "time series forecasting",
+            "segmentation and clustering",
+            "product design",
+            "classification models"
         ],
         "systems": [
-            "Not available in database"
+            "data engineering with aws",
+            "oracle cloud infrastructure foundations",
+            "oracle cloud infrastructure architect professional",
+            "oracle cloud infrastructure architect associate",
+            "oracle autonomous database administration"
         ],
         "microsoft azure fundamentals": [
-            "Not available in database"
+            "data engineering with aws",
+            "introduction to digital project management",
+            "data analysis and visualization",
+            "spark",
+            "intro to inferential statistics"
         ],
         "microsoft": [
-            "Not available in database"
+            "data engineering with aws",
+            "app marketing",
+            "time series forecasting",
+            "segmentation and clustering",
+            "product design"
         ],
         "azure": [
-            "Not available in database"
+            "design of computer programs",
+            "mobile design and usability for android",
+            "google maps apis",
+            "how to make an ios app",
+            "firebase analytics: android"
         ],
         "fundamentals": [
-            "Not available in database"
+            "data engineering with aws",
+            "firebase analytics: android",
+            "network security",
+            "intro to backend",
+            "Algorithms, Part I - Princeton"
         ]
     }
 }
