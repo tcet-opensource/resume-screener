@@ -1,5 +1,9 @@
 from flask import Flask,render_template
 
+# ImportError: attempted relative import with no known parent package
+import sys
+sys.path.append("..") # Adds higher directory to python modules path.
+
 app = Flask(__name__)
 
 # Register blueprints
@@ -11,6 +15,9 @@ app.register_blueprint(get_resume_data_bp)
 
 from routes.recommend_courses import recommend_courses_bp
 app.register_blueprint(recommend_courses_bp)
+
+from routes.ats_recommendations import ats_recommendations_bp
+app.register_blueprint(ats_recommendations_bp)
 
 @app.route("/")
 def index():
