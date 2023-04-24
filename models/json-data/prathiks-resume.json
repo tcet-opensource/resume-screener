@@ -1,0 +1,44 @@
+{
+    "filename": {
+      "college_name": null,
+      "company_names": [
+        "Microsoft"
+      ],
+      "degree": [
+        "B. Tech in AI&ML \u2013 9.71"
+      ],
+      "designation": null,
+      "email": "prathikkshetty15@gmail.com",
+      "experience": null,
+      "mobile_number": "9326344685",
+      "name": "| Linkedin",
+      "no_of_pages": 1,
+      "skills": [
+        "Research",
+        "Database",
+        "C++",
+        "Github",
+        "Flask",
+        "Content",
+        "Ui",
+        "Python",
+        "System",
+        "C",
+        "Safety",
+        "Website",
+        "Cloud",
+        "Analytics",
+        "Engineering",
+        "Nosql",
+        "Technical",
+        "Sql",
+        "R",
+        "Markdown",
+        "Javascript",
+        "Jupyter",
+        "Linux",
+        "Spacy"
+      ],
+      "total_experience": 0
+    }
+  }
