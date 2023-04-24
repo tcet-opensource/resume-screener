@@ -12,6 +12,7 @@ __pycache__/
 
 # Other sensitive or confidential data
 config.py
+.vscode
 credentials.json
 .env
 
