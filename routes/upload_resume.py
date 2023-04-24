@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify , render_template , request
+from flask import Blueprint, jsonify , render_template , request, send_from_directory
 from pyresparser import ResumeParser
 upload_resume_bp = Blueprint('upload_resume', __name__)
 import nltk
@@ -15,5 +15,10 @@ def upload_resume():
         data = ResumeParser(path).get_extracted_data()
         return jsonify({"filename":data})
     else:
-        return render_template('upload.html')
+        return send_from_directory('templates', 'upload.html')
+    # else:
+    #     return render_template('upload.html')
     # replace the output with appriopriate data
+    
+
+
