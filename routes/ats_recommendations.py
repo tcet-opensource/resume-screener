@@ -10,7 +10,7 @@ ats_recommendations_bp = Blueprint('ats_recommendations', __name__)
 
 @ats_recommendations_bp.route('/ats-recommendations', methods=['GET'])
 def get_recommendations():
-    file_path = "models\json-data\prathiks-resume.json"
+    file_path = "models/json-data/prathiks-resume.json"
     json_data = load_json_file(file_path)
     recommendations = ats_recommendations(json_data)
     recommendations_json = jsonify({'suggestions' : recommendations})
