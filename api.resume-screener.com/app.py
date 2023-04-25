@@ -1,4 +1,8 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,send_from_directory
+
+# ImportError: attempted relative import with no known parent package
+import sys
+sys.path.append("..") # Adds higher directory to python modules path.
 
 app = Flask(__name__)
 
@@ -12,9 +16,12 @@ app.register_blueprint(get_resume_data_bp)
 from routes.recommend_courses import recommend_courses_bp
 app.register_blueprint(recommend_courses_bp)
 
+from routes.ats_recommendations import ats_recommendations_bp
+app.register_blueprint(ats_recommendations_bp)
+
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return send_from_directory("../www.resume-screener.com/templates/upload.html","index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
