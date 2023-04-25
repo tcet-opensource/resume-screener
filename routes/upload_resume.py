@@ -14,8 +14,8 @@ def upload_resume():
         file.save(path)
         data = ResumeParser(path).get_extracted_data()
         return jsonify({"filename":data})
-    else:
-        return send_from_directory('templates', 'upload.html')
+    # else:
+    #     return send_from_directory('templates', 'upload.html')
     # else:
     #     return render_template('upload.html')
     # replace the output with appriopriate data
