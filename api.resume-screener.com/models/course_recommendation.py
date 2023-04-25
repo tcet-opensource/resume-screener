@@ -5,7 +5,9 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 import string
-from model_data.dataset.course_recommendation.course_list import engineering_courses
+from models.model_data.dataset.course_recommendation.course_list import (
+    engineering_courses,
+)
 
 
 class CourseRecommendation:
