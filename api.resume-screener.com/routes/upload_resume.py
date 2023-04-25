@@ -10,7 +10,7 @@ def upload_resume():
     # Code to handle resume upload from user end    
     if(request.method == 'POST'):
         file = request.files['file']
-        path = os.path.join(os.getcwd(),f"uploads\{file.filename}")
+        path = os.path.join(os.getcwd(),f"uploads/{file.filename}")
         file.save(path)
         data = ResumeParser(path).get_extracted_data()
         return jsonify({"filename":data})
