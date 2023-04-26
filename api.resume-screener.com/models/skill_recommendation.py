@@ -11,9 +11,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 class SkillRecommendation:
     def __init__(
         self,
-        resume_path="models/json_data/resume.json",
+        resume_path="models/json-data/resume.json",
         model_path="models\pickled_models\skill_model.pkl",
-        preds_path="models/json_data/similar_skills.json",
+        preds_path="models/json-data/similar_skills.json",
         n_neighbors=3,
         n_top=3,
     ):

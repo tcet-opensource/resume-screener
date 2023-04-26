@@ -16,12 +16,15 @@ app.register_blueprint(get_resume_data_bp)
 from routes.recommend_courses import recommend_courses_bp
 app.register_blueprint(recommend_courses_bp)
 
+from routes.recommend_skills import recommend_skills_bp
+app.register_blueprint(recommend_skills_bp)
+
 from routes.ats_recommendations import ats_recommendations_bp
 app.register_blueprint(ats_recommendations_bp)
 
 @app.route("/")
 def index():
-    return send_from_directory("../www.resume-screener.com/templates/upload.html","index.html")
+    return "hello world!"
 
 if __name__ == "__main__":
     app.run(debug=True)
