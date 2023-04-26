@@ -1,0 +1,33 @@
+{
+    "similar_skills": {
+        "Python": [
+            "Python programming",
+            "Java programming"
+        ],
+        "JavaScript": [
+            "HTML",
+            "AngularJS"
+        ],
+        "React": [
+            "UI/UX design",
+            "AngularJS"
+        ],
+        "Java": [
+            "Java programming",
+            "Python programming"
+        ],
+        "Spring Boot": [
+            "Django",
+            "AngularJS"
+        ],
+        "MySQL": [],
+        "SQL": [
+            "Cloud computing",
+            "Database management"
+        ],
+        "Node.js": [
+            "AngularJS",
+            "JavaScript"
+        ]
+    }
+}

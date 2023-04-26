@@ -1,0 +1,265 @@
+,Title,Description
+0,data engineering with aws,"learn to design data models, build data warehouses and data lakes, automate data pipelines, and manage massive datasets."
+1,product manager,"envision and execute the development of industry-defining products, and learn how to successfully bring them to market."
+2,c++,get hands-on experience building five real-world projects in this popular general-purpose programming language.
+3,business analytics,"gain foundational data skills like analyzing data, modeling business scenarios, and communicating findings."
+4,data scientist,"build effective machine learning models, run data pipelines, build recommendation systems, and deploy solutions to the cloud with industry-aligned projects."
+5,introduction to programming,"a first step for beginners towards careers in web and app development, machine learning, data science, ai, and more."
+6,digital marketing,"meet the growing demand for skilled digital marketers by learning the latest technologies for building impactful marketing strategies.
+"
+7,data analyst,"use python, sql, and statistics to uncover insights, communicate critical findings, and create data-driven solutions."
+8,deep learning,deep learning is driving advances in artificial intelligence that are changing our world—enroll now and learn to build and apply your own deep neural networks.
+9,programming for data science with python,"learn the fundamental programming tools for data professionals: python, sql, terminal, and git."
+10,full stack web developer,"learn to design and develop powerful modern web applications that form the foundation for the apps, websites, and systems that people and businesses use every day."
+11,aws machine learning engineer,learn the data science and machine learning skills required to build and deploy machine learning models in production using amazon sagemaker.
+12,sql,"master sql, the core language for big data analysis, to enable insight-driven decision-making and strategy."
+13,machine learning devops engineer,gain the devops skills required to automate the various aspects and stages of building and monitoring machine learning models.
+14,artificial intelligence for trading,"complete real-world projects designed by industry experts, covering topics from asset management to trading signal generation. master ai algorithms for trading, and build your career-ready portfolio."
+15,react,learn to build declarative user interfaces for the web with react as well as manage state more predictably in your applications with redux.
+16,self-driving car engineer,learn the techniques that power self-driving cars across the full stack of a vehicle’s autonomous capabilities.
+17,ux designer,design impactful user experiences for products in today’s digital world.
+18,java developer,"learn back-end development with java, one of the most popular programming languages in the world."
+19,data engineering with microsoft azure ,master job-ready azure skills like designing data models and utilizing other in-demand components of the cloud computing service.
+20,ai programming with python,"learn python, numpy, pandas, matplotlib, pytorch, calculus, and linear algebra—the foundations for building your own neural network."
+21,data product manager,apply data science best practices to build products that deliver the right experience to the right users—at the right time.
+22,intermediate python,"learn how to plan, design, and implement enterprise data infrastructure solutions and create the blueprints for your organization’s data success."
+23,growth product manager,"lead experimentation and data-driven decision-making to drive products to the next level of scale, impact, and profitability."
+24,front end web developer,learn how to build high quality websites and dynamic applications to create stunning user experiences for the web.
+25,blockchain developer,"demand for blockchain developers is skyrocketing. in this program, you'll work with the bitcoin and ethereum protocols, build projects for real-world application, and gain the essential skills for a career in this dynamic space."
+26,deep reinforcement learning,master the deep reinforcement learning skills that are powering amazing advances in ai—and start applying these skills to applications like video games and robotics.
+27,computer vision,"learn the in-demand skills of computer vision, a growing field of ai, that empower advancements in robotics and automation."
+28,data structures and algorithms,get hands-on practice with over 100 data structures and algorithm exercises with technical mentor support when needed to help prepare you for the workplace.
+29,robotics software engineer,"build five hands-on projects to acquire core robotics software engineering skills: ros, gazebo, localization, mapping, slam, navigation, and path planning."
+30,ai product manager,develop ai products that deliver real business value by building skills that help you compete in the new ai-powered world.
+31,android kotlin developer,"master android app development with kotlin, a modern programming language that enables developers to be more productive."
+32,java programming,"elevate your java abilities with the fundamental skills used by developers to design, code, test, and deploy cutting-edge java software."
+33,cloud devops engineer,companies are looking for talented devops engineers to remain competitive in this agile world. enroll now to master skills like operationalizing infrastructure at scale and delivering applications and services at high velocity.
+34,data architect,"learn how to plan, design and implement enterprise data infrastructure solutions and create the blueprints for your organization’s data success."
+35,data analysis and visualization with microsoft power bi,"utilize microsoft power bi as a primary tool for data pre-processing, visualization, and analysis."
+36,natural language processing,"learn the job-ready skills that progress computers to be able to understand, process, and respond to human language."
+37,intro to self-driving cars,this introductory program is the perfect way to start your journey into the future of transportation—flying cars.
+38,full stack javascript developer,"find success as a full stack developer by focusing on topics like ui, ux, apis, server side business logic, persistence layers, and more."
+39,introduction to cybersecurity,"get your start in the high growth field of cybersecurity by building foundational skills including evaluating, maintaining, and monitoring the security of computer systems."
+40,data streaming,learn how to stream data to unlock key insights in real-time.
+41,cloud developer,cloud development is the foundation for the new world of software development. enroll now to build and deploy production-ready full stack apps at scale on aws.
+42,intro to machine learning with tensorflow,"build a solid foundation in supervised, unsupervised, and deep learning. then, use these skills to test and deploy machine learning models in a production environment."
+43,sensor fusion engineer,"learn to fuse lidar point clouds, radar signatures, and camera images using kalman filters to detect and track vehicles and pedestrians over time."
+44,predictive analytics for business,"learn essential ai concepts including search, optimization, planning, pattern recognition, and more from experts like peter norvig and sebastian thrun."
+45,intermediate javascript,"master javascript, the most popular programming language in the world. be equipped for advanced roles in web development, server-side application development, and desktop development."
+46,agile software development,"get equipped with the skills you need to guide the delivery of high value products with top notch software development teams.
+"
+47,intro to machine learning with pytorch,"build a solid foundation in supervised, unsupervised, and deep learning. then, use these skills to test and deploy machine learning models in a production environment."
+48,aws cloud architect,"build confidence planning, designing, and creating high availability cloud infrastructure."
+49,ai for business leaders,"master the foundations of artificial intelligence so you can strategically implement machine learning technology in your organization, and leverage it for corporate growth."
+50,ai for healthcare,be at the forefront of the ai revolution in healthcare and transform patient outcomes by enabling enhanced medical decision-making powered by machine learning.
+51,ios developer,"master the swift programming language, and create a portfolio of ios apps for iphone and ipad to showcase your skills!"
+52,flying car and autonomous flight engineer,"master job-ready autonomous flight software engineering skills as you tackle advanced challenges, write real code for real aircraft, and develop a systems understanding of the flying car full-stack."
+53,artificial intelligence,"learn essential artificial intelligence concepts from ai experts like peter norvig and sebastian thrun, including search, optimization, planning, pattern recognition, and more."
+54,digital project management,"build confidence translating business requirements into project scope statements, creating project plans, and developing a high-performing team.
+"
+55,cloud native application architecture,"learn to run and manage scalable applications in a cloud native environment using open source tools and projects like argocd, grpc, and grafana."
+56,data visualization,"combine data, visuals, and narrative to tell impactful stories and make data-driven decisions."
+57,marketing analytics,"learn to collect and analyze data, model marketing scenarios, and communicate your findings with excel, tableau, google analytics, and data studios."
+58,cloud architect using microsoft azure,"meet the growing demand for azure cloud architects and learn the skills to translate business requirements into technical specifications for reliable, scalable, and secure cloud infrastructure using microsoft azure."
+59,ethical hacker,"learn how to find and exploit vulnerabilities, design and execute penetration testing plans, and report on test findings."
+60,rpa developer with uipath,build the operational processes that enable the businesses of the future.
+61,privacy engineer,"master the skills necessary to become a successful privacy engineer. learn to create technical solutions and implement privacy principles by integrating privacy-by-design into product development, data infrastructure, and software release lifecycles."
+62,machine learning engineer for microsoft azure,"strengthen your machine learning skills and build practical experience by training, validating, and evaluating models using azure machine learning. "
+63,data science for business leaders,"master the people, platforms, and processes required to leverage the power of data science in your business."
+64,security engineer,take advantage of the growing need for skilled security professionals by mastering the sought-after skills to protect an organization’s computer networks and systems from security threats or attacks.
+65,site reliability engineer,"learn to build automation tools that ensure designed solutions respond to requirements such as availability, performance, security, and maintainability."
+66,cloud devops using microsoft azure,"learn how to deploy, test, and monitor cloud applications on azure, one of the most popular cloud services platforms across the globe."
+67,security analyst,"learn to identify, correct, and respond to security weaknesses and incidents through open-ended projects that mimic workplace security challenges."
+68,digital freelancer,the goal of the digital freelancer nanodegree program is to prepare students to enter the digital marketplace by teaching key skills to create a successful digital business. students will learn freelancing basics and essential skills as well as how to build their personal brand to start a successful online business in the global freelancing marketplace.
+69,cloud developer using microsoft azure,"master critical cloud computing skills used to deploy, build, migrate, and monitor applications on azure."
+70,golang,"discover golang’s implementation of traditional programming features, as well as extra features that make it a powerful tool."
+71,data privacy,equip yourself with industry-guided data privacy best practices for physical or virtual office environments.
+72,cloud computing for business leaders,focus on the unique knowledge and skills that business leaders need to unlock the value of cloud technologies in their organizations.
+73,security architect,the goal of the security architect nanodegree is to equip learners with the necessary skills to implement elements of security infrastructure design and management at an enterprise level.
+74,enterprise security,"this program addresses security topics related to corporate environments, which are often distinct from production environments and center around the devices, identities, and infrastructure used by personnel on a daily basis."
+75,ai engineer using microsoft azure,"master the skills necessary to implement machine learning models, build end-to-end ai solutions, and manage continuous improvement of an azure ai solution."
+76,programming for data science with r,"prepare for a data science career by learning the fundamental data programming tools: r, sql, command line, and git."
+77,zero trust security,learners leave the course with a reinvigorated perspective on cybersecurity and a lexicon of practices and solutions that support what is rapidly becoming the new dominant strategy in enterprise security.
+78,cybersecurity for business leaders,learn to leverage the capabilities of cybersecurity best practices to protect your organization and unlock next-level results.
+79,ethical ai,"learn to apply ethical ai to minimize bias, while maximizing fairness and explainability, ensuring an ethical future for all."
+80,aws machine learning foundations course,learn what machine learning is and the steps involved in building and evaluating models. gain in demand skills needed at businesses working to solve challenges with ai.
+81,introduction to machine learning using microsoft azure,"gain a high-level introduction to the field of machine learning and prepare to use azure machine learning studio to train machine learning models. plus, learn how to perform a variety of tasks on azure machine learning labs — from data import, transformation and management to training, validating and evaluating models."
+82,ai fundamentals,"ai fundamentals is an entry point into the world of ai using microsoft's cloud-based solutions, such as azure machine learning and azure cognitive services."
+83,linear algebra refresher course,learn linear algebra by doing: you will code your own library of linear algebra functions!
+84,machine learning: unsupervised learning,ever wonder how netflix can predict what movies you'll like? or how amazon knows what you want to buy before you do? the answer can be found in unsupervised learning!
+85,big data analytics in healthcare,"in this course, we introduce the characteristics of medical data and associated data mining challenges on dealing with such data. we cover various algorithms and systems."
+86,intel® edge ai fundamentals with openvino™,stay at the cutting-edge of ai technology by gaining practical skills for deploying edge ai. learn how to use the intel distribution of openvino toolkit to deploy computer vision capabilities inside a range of edge applications.
+87,artificial intelligence,"this course gives a survey of topics in ai along with in-depth foundational concepts such as classical search, probability, machine learning, logic and planning."
+88,secure and private ai,learn how to extend pytorch with the tools necessary to train ai models that preserve user privacy.
+89,model building and validation,this course will teach you how to start from scratch in understanding and paying attention to what is important in the data and how to answer questions about data.
+90,data visualization and d3.js,learn the fundamentals of data visualization and apply design and narrative concepts to create your own visualization.
+91,machine learning for trading,implement machine learning based strategies to make trading decisions using real-world data.
+92,machine learning,"in this course, you'll learn how to apply supervised, unsupervised and reinforcement learning techniques for solving a range of data science problems."
+93,intro to hadoop and mapreduce,"in this short course, learn the fundamentals of mapreduce and apache hadoop to start making sense of big data in the real world!"
+94,real-time analytics with apache storm,"the world is trending in real time! learn apache storm, taught by twitter, to scalably analyze real-time tweets and drive d3 visualizations. storm is free, open and fun!"
+95,a/b testing,"this course will cover the design and analysis of a/b tests, also known as split tests, which are online experiments used to test potential improvements to a website or mobile application. "
+96,data analysis with r,data is everywhere and so much of it is unexplored. learn how to investigate and summarize data sets using r and eventually create your own analysis.
+97,knowledge-based ai: cognitive systems,the twin goals of knowledge-based artificial intelligence (ai) are to build ai agents capable of human-level intelligence and gain insights into human cognition.
+98,introduction to tensorflow lite,learn how to deploy deep learning models on mobile and embedded devices with tensorflow lite.
+99,introduction to computer vision,"this course provides an introduction to computer vision including fundamentals, methods for application and machine learning classification."
+100,intro to tensorflow for deep learning,"developed by google and udacity, this course teaches a practical approach to deep learning for software developers."
+101,eigenvectors and eigenvalues,learn how to calculate eigenvalues and eigenvectors and why they are important for ai applications.
+102,intro to artificial intelligence,"this course will introduce you to the basics of ai. topics include machine learning, probabilistic reasoning, robotics, computer vision, and natural language processing."
+103,artificial intelligence for robotics,"learn how to program all the major systems of a robotic car. topics include planning, search, localization, tracking, and control."
+104,intro to deep learning with pytorch,learn the basics of deep learning and implement your own deep neural networks with pytorch
+105,aws deepracer,learn the fundamentals of machine learning and reinforcement learning in a fun and engaging way through autonomous driving with aws deepracer.
+106,reinforcement learning,learn how to engage with machine learning from a theoretical perspective. explore automated decision-making and dive into advanced algorithms. 
+107,introduction to machine learning course,"this class will teach you the end-to-end process of investigating data through a machine learning lens. learn online, with udacity."
+108,microsoft power platform,"learn to build powerful and effective solutions with ease with microsoft power platform. created in partnership with the microsoft power platform team, this course will introduce you to efficient low-code solutions for data analytics, app development, and artifical intelligence."
+109,web tooling & automation,"in this course, you’ll learn how to setup your development environment and save a lot of time and effort with automatic optimization."
+110,front end frameworks,"explore and build interactive, single-page applications with popular javascript frameworks!"
+111,responsive web design fundamentals,learn and practice strategies for developing websites that look great on every device! made with google's pete lepage.
+112,how to install android studio,participate in this short tutorial to install android studio on your computer and set up a new project using the program's project wizard.
+113,website performance optimization,"learn how browsers convert html, css and javascript into websites while you experiment with chrome developer tools to measure and optimize website speed!"
+114,ios networking with swift,learn how to incorporate networking into your apps to access data from around the world. build the on the map app to share location and fun links with fellow students.
+115,javascript design patterns,learn the importance of code organization and how to implement it with either vanilla javascript or an organizational library or framework.
+116,android performance,"performance matters to users, so it must matter to you. learn how to identify and fix bottlenecks in your android applications, and ensure a smooth user experience."
+117,responsive images,go beyond image tags! learn how to make images a part of your responsive design workflow.
+118,xcode debugging,"in this course, you'll learn standard methodologies for debugging software, and how to use xcode's debugging tools to find and squash bugs."
+119,build native mobile apps with flutter,learn from experts at google how to use flutter to craft high-quality native interfaces on ios and android devices in record time.
+120,javascript promises,learn how to simplify asynchronous work with native javascript promises!
+121,uikit fundamentals,"learn the ios uikit framework, which is the cornerstone of creating user interfaces in all ios apps and crucial for any ios developer to be intimately familiar with."
+122,client-server communication,"learn how a client communicates with a server, including http's request and response cycle, http/2 and https."
+123,what is programming?,this course is your first step towards a career in programming.
+124,building high conversion web forms,"increase conversions with best practices for fast, efficient forms! learn how to design and build web forms for users on any device."
+125,software architecture & design,software architecture and design teaches the principles and concepts involved in the analysis and design of large software systems.
+127,authentication & authorization: oauth,learn to implement the oauth 2.0 framework to allow users to securely and easily login to your web applications.
+128,intro to ios app development with swift,take the first step in becoming an ios developer by learning about swift and writing your first app.
+129,introduction to operating systems,"introduction to operating systems teaches the basic operating system abstractions, mechanisms, and their implementations."
+130,web accessibility,"get hands-on experience making web applications accessible. you’ll understand when and why users need accessibility, then you’ll dive into how to implement."
+131,android basics: data storage,"in this course, you'll learn the basics of data storage in android, building your first database and an app that could be used for any small business!"
+132,scalable microservices with kubernetes,"this course is designed to teach you about managing microservices, using kubernetes. this course is built in partnership with experts such as google’s kelsey hightower."
+133,developing android apps with kotlin,learn the fundamentals of the kotlin programming language from kotlin experts at google.
+134,browser rendering optimization,this course will demystify the browser's rendering pipeline and make it easy for you to build high performance web apps.
+135,learn swift programming syntax,"this course focuses on the syntax of the swift programming language. by the end of the course, you'll be able to apply swift essentials to building ios apps."
+136,offline web applications,learn how to develop offline-first web application using service workers and indexeddb.
+137,kotlin for android developers,"take an android app in java and convert it to kotlin, learning key features of the kotlin programming language along the way."
+138,ux design for mobile developers,this is a design course made for developers. you'll learn ux design skills which will help you make 5-star mobile apps that your users will love.
+139,software development process,"software development processes explores requirements engineering, architecture and design, testing, and software quality in general."
+140,data visualization in tableau,learn the fundamentals of data visualization and practice communicating with data.
+141,intro to progressive web apps,in this course you’ll get started working on your very first progressive web app (pwa) - a web app that can take advantage of many features native applications have enjoyed!
+142,writing readmes,documentation is an important part of the development process. learn to write readmes using markdown so your code can be used by other humans!
+143,software analysis & testing,"this course covers the theory and practice of software analysis, which is at the heart of software development processes such as diagnosing bugs, testing, and debugging."
+144,ios persistence and core data,"persisting data is a core skill for any ios developer. learn how to store app data to your device using three common techniques: nsuserdefaults, sandbox, and core data."
+145,computer networking,this is an advanced computer networking course that delves into the latest concepts and tools used by the cn industry.
+146,firebase analytics: ios,"learn how to grow an app's user base using firebase analytics, a free and unlimited analytics solution"
+147,human-computer interaction,"this course is an introductory course on human-computer interaction, covering the principles, techniques, and open areas of development in hci."
+148,2d game development with libgdx,"this course explores how to use libgdx to build 2d games that run anywhere, from web browsers to mobile devices. at the end you will create a full game, called icicles."
+149,intro to jquery,learn how to access and modify the dom with ease using jquery!
+150,cyber-physical systems security,this course provides an introduction to security issues relating to cyber-physical systems including industrial control systems and critical infrastructures.
+151,how to create <anything> in android,learn to implement the newest android user interface components while building apps in android studio.
+152,introduction to graduate algorithms,learn advanced techniques for designing algorithms and apply them to hard computational problems.
+153,dynamic web applications with sinatra,"sinatra is a micro-framework for quickly developing small ruby applications for the web. in this course, you'll learn all about sinatra, routing, and templating."
+154,how to make a platformer using libgdx,"this course will explore how to create a game called giga gal. giga gal is a platformer in which you run, collect energy packs, jump a bunch, and shoot enemies."
+155,javascript testing,learn how to iterate on your web applications with confidence using the red-green-refactor workflow cycle and automated testing frameworks.
+157,localization essentials,"localization is about making a product feel tailored to users around the world. specifically, it is the process of adapting a product to a language, culture and market."
+158,compilers: theory and practice,this course teaches the theory and practice behind building compilers for higher level programming languages.
+159,html5 canvas,learn how you can use html5 canvas to create and modify images or even interactive animations.
+160,object oriented programming in java,learn how to apply powerful object-oriented programming concepts in java
+161,designing restful apis,build and secure a web server with a restful developer-friendly api that developers will love to use.
+162,gt - refresher - advanced os,"this course covers the essential operating systems concepts students need in preparation for the rest of the gt ""advanced operating systems"" sequence."
+163,intro to javascript,"learn the fundamentals of javascript, the most popular programming language in web development."
+164,grand central dispatch (gcd),learn how to prevent background operations from interfering with an app's ui by implementing apple's gcd framework.
+165,continuous integration and deployment,"in this course, you'll learn how to improve the mobile development process by using continuous integration and deployment."
+166,swift for beginners,"learn swift, apple's programming language for building ios applications. start with the basics and work your way towards completing sets of challenges in swift."
+167,intro to statistics,"get ready to analyze, visualize, and interpret data! thought-provoking examples and chances to combine statistics and programming will keep you engaged and challenged."
+168,intro to html and css,"in this course, you'll learn the fundamentals web development, along with best practices and professional problem-solving techniques using developer tools."
+169,introduction to python programming,"in this course, you'll learn the fundamentals of the python programming language, along with programming best practices. you’ll learn to represent and store data using python data types and variables, and use conditionals and loops to control the flow of your programs. you’ll harness the power of complex data structures like lists, sets, dictionaries, and tuples to store collections of related data. you’ll define and document your own custom functions, write scripts, and handle errors. lastly, you’ll learn to find and use modules in the python standard library and other third-party libraries."
+170,introduction to virtual reality,"if you are interested in learning more about virtual reality, this course will teach you the principles of vr technology and help you understand what you can build in vr."
+171,objective-c for swift developers,"learn the distinguishing language features of objective-c. practice objective-c syntax by writing classes, and writing and calling methods."
+172,interactive 3d graphics,"this course will teach you the principles of 3d computer graphics: meshes, transforms, lighting, animation, and making interactive 3d applications run in a browser."
+173,full stack foundations,learn the fundamentals of back-end web development by creating your own web application from the ground up using the iterative development process.
+174,high performance computer architecture,"the hpca course covers performance measurement, pipelining, and improved parallelism through various means."
+175,autolayout,"with this course, you will learn about autolayout and how to use stack views and constraints to create pixel-perfect uis."
+176,kotlin bootcamp for programmers,learn the fundamentals of the kotlin programming language from kotlin experts at google.
+177,shell workshop,"this course is intended to get you up to speed on the shell — using a terminal, managing files and directories, and running command-line programs."
+178,core ml: machine learning for ios,learn how to use apple's core ml framework to build ios apps with intelligent new features.
+179,statistics,we live in a time of unprecedented access to information. you'll learn how to use statistics to interpret that information and make decisions.
+180,intro to theoretical computer science,learn the basic concepts in theoretical computer science. discover what they imply for solving tough computational challenges.
+181,design of computer programs,"learn how to model problems, and how to optimize performance by using some of the advanced features of python."
+182,data wrangling with mongodb,"data scientists spend most of their time cleaning data. in this course, you will learn to convert and manipulate messy data to extract what you need."
+183,swift for developers,get a quick practical introduction to swift programming basics and build your first ios app!
+184,firebase in a weekend: android,this course will teach you when and why to choose firebase as a backend for your android application.
+185,software debugging,in this course you will learn how to debug programs systematically using scientific methods and build several automated debugging tools in python.
+186,deploying a hadoop cluster,deploy your own hadoop cluster to crunch some big data!
+187,server-side swift,"in this course, built in collaboration with ibm and hashicorp, you'll learn how to use swift as a server-side language for building end-to-end applications."
+188,networking for web developers,you've used the internet. now find out more about how it works.
+189,database systems concepts & design,this course presents an example of applying a database application development methodology to a major real-world project.
+190,intro to physics,"go to the places where big physics discoveries were made in the past and make them yourself. you’ll visit italy, the netherlands, and the uk as you learn basic physics."
+191,intro to relational databases,relational databases are a powerful tool used throughout the industry. learn the basics of sql and how to connect your python code to a relational database.
+192,es6 - javascript improved,learn about the changes made to the javascript programming language in ecmascript 6 and how to use these new improvements to write better cleaner code.
+193,mobile design and usability for ios,"in this course, taught in collaboration with facebook, you'll learn how to design an intuitive, user-centered mobile app, from product conception to release."
+194,intro to ajax,"learn how to perform asynchronous requests as you build a web app with data from google street view, the new york times and wikipedia!"
+195,intro to algorithms,"this class will give you an introduction to the design and analysis of algorithms, enabling you to analyze networks and discover how individuals are connected."
+196,the mvc pattern in ruby,"in this course you’ll learn how to organize your code, and why that’s important. you’ll be using the mvc design pattern in the web application micro-framework sinatra."
+197,wechat mini program development,"developed by tencent and udacity, this course will teach you to build your first mini program."
+198,asynchronous javascript requests,learn how to asynchronously request data in your web applications with ajax.
+199,embedded systems,"this course takes a holistic view of the embedded system stack focusing on processor architectures, instruction sets, and the associated advanced compiler optimizations."
+200,high performance computing,"this course will give you solid foundations for developing, analyzing, and implementing parallel and locality-efficient algorithms.  offered at georgia tech as cs6220"
+201,http & web servers,http is the fundamental protocol of the web. explore how it works using python code and command-line tools.
+202,advanced android with kotlin,develop feature-rich android apps with the kotlin programming language.
+203,"computability, complexity & algorithms",learn tools and techniques that will help you recognize when problems you encounter are intractable and when there an efficient solution.
+205,passwordless login solutions for ios,"in this course you'll implement account kit and facebook login side by side in a sample app, test our login flow on a series of common use cases, and wrap things up with an introduction to facebook’s graph api."
+206,version control with git,"learn how to use git, a popular version control system and essential tool for any developer."
+207,firebase in a weekend: ios,this course will teach you when and why to choose firebase as a backend for your ios application.
+208,intro to point & click app development,in this short class you'll build powerful apps without writing code. great if you're an aspiring developer or someone who wants to learn what programmers do.
+209,deploying applications with heroku,deploy your first web application using the heroku platform and learn about the underlying mechanics of web hosting.
+210,applied cryptography,"cryptography is present in everyday life, from paying with a credit card to using the telephone.  learn all about making and breaking puzzles in computing."
+211,java programming basics,"take your first steps towards becoming a java developer! learn java syntax and create conditional statements, loops, and functions."
+212,c++ for programmers,"this course teaches c++ to students already familiar with a programming language. students will learn how to use header files, control flow, functions, classes."
+213,intro to backend,learn to build a multiuser blog with google app engine that permits users to sign in
+214,network security,"this course provides an introduction to computer and network security. students successfully completing this class will be able to evaluate works in academic and commercial security, and will have rudimentary skills in security research."
+216,firebase analytics: android,"learn how to grow an app's user base using firebase analytics, a free and unlimited analytics solution"
+218,how to make an ios app,"learn the process of building an app, taking your ideas from drawing board to app store!"
+219,google maps apis,this course will introduce you to the content available through the google maps apis through building a real-estate listings web application step-by-step.
+221,mobile design and usability for android,"in this course, taught in collaboration with facebook, you'll learn how to design an intuitive, user-centered mobile app, from product conception to release."
+222,ios design patterns,"in this course, you'll explore ios design patterns — the practical and battle-tested solutions to common problems that are used everyday by developers."
+223,intro to psychology,go on a journey through psychological concepts and principles to enable you to gain a more in-depth understanding of human thought and behavior.
+224,engagement & monetization | mobile games,"you will learn the most effective monetization strategies for your game, how to  keep your players interested and engaged, so that your game stands out in the app store."
+225,intro to data analysis,"explore a variety of datasets, posing and answering your own questions about each. you'll be using the python libraries numpy, pandas, and matplotlib."
+226,sql for data analysis,learn to use structured query language (sql) to extract and analyze data stored in databases
+227,intro to inferential statistics,intro to inferential statistics will teach you how to test your hypotheses and begin to make predictions based on statistical results drawn from data!
+228,spark,master how to work with big data and build machine learning models at scale using spark!
+229,data analysis and visualization,"this course will introduce students to the field by covering state­-of-­the-art modeling, analysis and visualization techniques."
+230,introduction to digital project management,"this course introduces the field of digital project management, while diving into relevant career paths and what exactly those paths entail. it also covers the basic structure on which digital projects are formed."
+231,getting started with google workspace,"learn how to manage mail and schedules effectively. create, manage and, share content in google drive and become more productive through the use of the collaboration features that are an integral and defining part of google workspace."
+232,rapid prototyping,learning to prototype will save you time and money in the development process. you’ll create quality apps faster and have confidence in the viability of your products.
+233,creating an analytical dataset,learn how to prepare data to ensure the efficacy of your analysis while improving fluency in alteryx.
+234,problem solving with advanced analytics,"learn a scientific approach to solving problems with data, a foundational skill for anyone interested in making data driven decisions in a business context."
+235,classification models,learn how to use classification predictive models to solve business problems involving non-numeric data.
+236,product design,"learn product validation, ui/ux practices, google’s design sprint and the process for setting and tracking actionable metrics."
+237,segmentation and clustering,the segmentation & clustering course provides students with the knowledge to build and apply clustering models to develop sophisticated segmentation in business contexts.
+238,time series forecasting,the time series forecasting course provides students with the foundational knowledge to build and apply time series forecasting models in a variety of business contexts.
+239,app marketing,"this course will help you organize a strategy of identifying your perfect user, and teach you how to grow your user base by focusing your product on their needs."
+240,app monetization,"learn how to effectively develop, implement, and measure your monetization strategy, iterating on the model as appropriate."
+241,a/b testing for business analysts,the a/b testing course provides students with the foundational knowledge to design and analyze a/b tests to create business insights and support decision making.
+242,how to build a startup,"learn what it takes to build a successful startup using the customer development process, where entrepreneurs ""get out of the building"" to gather and iterate on feedback."
+243,get your startup started,acquire the know-how necessary to see your business grow towards its next milestone.
+244,managing remote teams with upwork,bring your remote-teams to the next level with hands-on skills to manage your remote workforce effectively.
+245,oracle autonomous database administration,"dive into the fundamentals of autonomous databases. explore the process of planning, implementing, and deploying an oracle autonomous database, the first and only autonomous database service in the cloud."
+246,oracle cloud infrastructure architect associate,develop key insights into key concepts and features of oracle cloud infrastructure (oci).
+247,oracle cloud infrastructure architect professional,this course will help you gain strong knowledge through hands-on experience with architecting infrastructure using oracle cloud infrastructure services.
+248,oracle cloud infrastructure foundations,develop foundational knowledge of oracle cloud infrastructure cloud services.
+249,oracle cloud infrastructure operations professional,this course is going to walk you through some of the day-to-day operational activities that you might find yourself managing in the oracle cloud infrastructure ecosystem.
+250,google cloud digital leader training,gain foundational literacy in cloud & digital transformation. increase your cloud confidence so you can speak with colleagues in technical cloud roles and contribute to informed cloud-related business decisions.
+251,cloud native fundamentals,"throughout this course, students will learn how to structure, package, and release an application to a kubernetes cluster, while using an automated ci/cd pipeline."
+252,cyber-physical systems design & analysis,this course provides an introduction to cyber-physical systems with an industrial perspective.
+253,differential equations in action,"write python code to find numerical solutions to systems of differential equations. the models you create will fight wildfires, bring spaceships back to earth, and more!"
+254,self-driving fundamentals: featuring apollo ,"identify key parts of self-driving cars, utilize apollo hd map, localization, perception, prediction, planning and control, and start the learning path of building a self-driving car. "
+255,product manager interview preparation,"ace your product management interview by understanding how to answer key strategic, technical, and practical product questions."
+256,craft your cover letter,write a compelling narrative that showcases your value to the company.
+257,refresh your resume,create a targeted resume that gets the attention of recruiters and lands you an interview in tech.
+258,strengthen your linkedin network & brand,learn how to excel at networking both in-person and on linkedin.
+259,data science interview prep,"prepare for data science interviews by practicing data analysis, machine learning, and data structure and algorithms questions."
+260,android interview prep,learn how to respond to common android and mobile development interview questions.
+261,machine learning interview preparation,"in this course, you’ll learn exactly what to expect during a machine learning interview."
+262,front-end interview prep,answer front-end technical and behavioral interview questions with confidence and poise.
+263,full-stack interview prep,answer common full stack and web security interview questions with confidence and poise.
+264,data structures & algorithms in swift,review and practice the skills technical interviewers expect you to know and learn how to explain your swift solutions.
+265,ios interview prep,answer ios and mobile development interview questions with confidence and poise.
+266,vr interview prep,learn how to tackle interview questions for technical roles in vr development.
