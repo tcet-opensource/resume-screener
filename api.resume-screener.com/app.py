@@ -22,6 +22,9 @@ app.register_blueprint(recommend_skills_bp)
 from routes.ats_recommendations import ats_recommendations_bp
 app.register_blueprint(ats_recommendations_bp)
 
+from routes.overall_score import overall_score_bp
+app.register_blueprint(overall_score_bp)
+
 @app.route("/")
 def index():
     return "hello world!"
