@@ -80,7 +80,7 @@
             
             const formData = new FormData(form, submitBtn); // Create a new FormData object from the form data
             console.log(formData)
-            fetch('http://127.0.0.1:5000/upload-resume', {
+            fetch('/upload-resume', {
                 method: 'POST',
                 body: formData
             })
