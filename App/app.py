@@ -16,6 +16,9 @@ from Skills import ds_keyword,web_keyword,android_keyword,ios_keyword,uiux_keywo
 from Recommendations import web_skills,ds_skills,ios_skills,android_skills,uiux_skills,no_skills
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course
 import nltk
+import spacy
+
+nlp = spacy.load('en_core_web_sm')
 nltk.download('stopwords')
 
 
@@ -24,13 +27,38 @@ st.set_page_config(
    page_icon='./imgs/design.jpg',
 )
 
+page_element="""
+<style>
+[data-testid="stAppViewContainer"]{
+background-image: url("https://www.surveylegend.com/wordpress/wp-content/themes/sage/resources/images/img/modal/upgrade-file-upload.png");
+background-size: cover;
+}
+[data-testid="stHeader"]{
+background-color: rgba(0,0,0,0);
+}
+[data-testid="stToolbar"]{
+right: 2rem;
+background-image: url("");
+background-size: cover;
+}
+[data-testid="stSidebar"]> div:first-child{
+background-image: url("https://img.freepik.com/premium-vector/skyblue-gradient-background-advertisers-gradient-hq-wallpaper_189959-513.jpg");
+background-size: cover;
+}
+</style>
+
+"""
+st.markdown(page_element, unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center';> Resume Screener 📄</h1>", unsafe_allow_html=True)
+
+
 def main():
-    img = Image.open('./imgs/design.jpg')
-    resized_img = img.resize((300, 300))
-    container = st.container()
-    with container:
-        col1, col2, col3 = st.columns([1, 2, 1])
-    col2.image(resized_img, use_column_width=True)
+    # img = Image.open('./imgs/design.jpg')
+    # resized_img = img.resize((300, 300))
+    # container = st.container()
+    # with container:
+    #     col1, col2, col3 = st.columns([1, 2, 1])
+    # col2.image(resized_img, use_column_width=True)
     
     activities = ["User", "Admin"]
     choice = st.sidebar.selectbox("Choose among the given options:", activities, key="level_select")
