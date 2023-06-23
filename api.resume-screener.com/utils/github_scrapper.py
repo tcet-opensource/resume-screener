@@ -47,6 +47,6 @@ def fetch_user_corpus(username):
     return None
 
 if __name__ == "__main__":
-    username = "prathikshetty2002"
+    username = input("Enter github username")
     result = fetch_user_corpus(username)
     print(result)
