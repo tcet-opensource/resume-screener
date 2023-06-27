@@ -8,54 +8,57 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-def preprocess_text(corpus:list):
-    new_corpus = ' '.join(corpus)
+class github_analyser:
+    def __init__(self):
+        self.tfidf = TfidfVectorizer(lowercase=True, stop_words=stopwords.words('english'))
+        self.stemmer = PorterStemmer()
 
-    # Removing characters other than alphabets and whitespaces
-    document = re.sub("[^a-zA-Z\s]", "", new_corpus)
+    def preprocess_text(self, corpus):
+        new_corpus = ' '.join(corpus)
 
-    # Splitting document into words
-    words = document.split(' ')
+        # Removing characters other than alphabets and whitespaces
+        document = re.sub("[^a-zA-Z\s]", "", new_corpus)
 
-    # Stemming
-    stemmer = PorterStemmer()
-    stemmed_corpus = ''
-    for word in words:
-        if word not in set(stopwords.words('english')):
-                stemmed_corpus += ' ' + stemmer.stem(word)
-    return [stemmed_corpus]
+        # Splitting document into words
+        words = document.split(' ')
 
-def generate_word_cloud(text):
-    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+        # Stemming
+        stemmed_corpus = ''
+        for word in words:
+            if word not in set(stopwords.words('english')):
+                stemmed_corpus += ' ' + self.stemmer.stem(word)
+        return [stemmed_corpus]
 
-    plt.figure(figsize=(10, 5))
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.axis('off')
-    plt.show()
+    def generate_word_cloud(self, text):
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
 
-def find_similarity(username, job_profile):
-    user_corpus = fetch_user_corpus(username)
-    job_corpus = job_profile
+        plt.figure(figsize=(10, 5))
+        plt.imshow(wordcloud, interpolation='bilinear')
+        plt.axis('off')
+        plt.show()
+
+    def find_similarity(self, username, job_profile):
+        user_corpus = fetch_user_corpus(username)
+        job_corpus = job_profile
     
-    preprocessed_user = preprocess_text(user_corpus)
-    preprocessed_job = preprocess_text(job_corpus)
+        preprocessed_user = self.preprocess_text(user_corpus)
+        preprocessed_job = self.preprocess_text(job_corpus)
 
-    tfidf = TfidfVectorizer(lowercase=True, stop_words=stopwords.words('english'))
-    
-    job_vectors = tfidf.fit_transform(preprocessed_job) # Inputs must be list
-    user_vectors = tfidf.transform(preprocessed_user) # Inputs must be list
+        job_vectors = self.tfidf.fit_transform(preprocessed_job)
+        user_vectors = self.tfidf.transform(preprocessed_user)
 
-    similarity = cosine_similarity(user_vectors, job_vectors) # 2D array returned
+        similarity = cosine_similarity(user_vectors, job_vectors)
+
+        print(f"Your profile matched {similarity[0][0] * 100:.2f}% with the job description!", end='\n\n')
     
-    print(f"Your profile matched {similarity[0][0]*100:.2f}% with the job description!",end='\n\n')
+        matched_words = self.tfidf.get_feature_names_out()[job_vectors.indices]
+        matched_text = ' '.join(matched_words)
+        self.generate_word_cloud(matched_text)
     
-    matched_words = tfidf.get_feature_names_out()[job_vectors.indices]
-    matched_text = ' '.join(matched_words)
-    generate_word_cloud(matched_text)
-    
-    return similarity
+        return similarity
 
 if __name__ == '__main__':
-    username = input("Enter github username:")
-    job_profile = '' # fetch_job_descs_corpus() Fetch and store the job description corpus to be passed into function
-    print(find_similarity(username, job_profile))
+    analyser = github_analyser()
+    username = input("Enter GitHub username:")
+    job_profile = ''  # Fetch and store the job description corpus to be passed into the function
+    print(analyser.find_similarity(username, job_profile))
