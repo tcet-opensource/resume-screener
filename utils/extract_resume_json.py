@@ -4,9 +4,9 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/extract-resume-content', methods=['POST'])
+@app.route('/extract-resume-content', methods=['GET'])
 def extract_resume_content():
-    file = request.files['resume']
+    file = "utils\example.pdf"
     content = file.read()
     resume_content = extract_resume_content(content)
     return jsonify(resume_content)
@@ -75,9 +75,9 @@ def extract_resume_content(pdf_path):
             internship_index = page_content.index('INTERNSHIP')
             internship = page_content[internship_index + 1:]
 
-            # if 'TECHNICAL SKILLS' in internship:
-            #     internship_index = internship.index('INTERNSHIP')
-            #     internship = internship[:internship_index]
+            if 'TECHNICAL SKILLS' in internship:
+                skills_index = internship.index('TECHNICAL SKILLS')
+                internship = internship[:internship_index]
 
 
             resume_content['INTERNSHIP'] = internship
@@ -87,22 +87,32 @@ def extract_resume_content(pdf_path):
         if extract_technical_skills and 'TECHNICAL SKILLS' in page_content:
             skills_index = page_content.index('TECHNICAL SKILLS')
             skills = page_content[skills_index + 1:]
+
+
+            if 'CO/EXTRA-CURRICULAR ACTIVITIES' in skills:
+                skills_index = skills.index('CO/EXTRA-CURRICULAR ACTIVITIES')
+                skills = skills[:skills_index]
+
+
             resume_content['TECHNICAL SKILLS'] = skills
             extract_technical_skills = False
 
         if 'CO/EXTRA-CURRICULAR ACTIVITIES' in page_content:
             activities_index = page_content.index('CO/EXTRA-CURRICULAR ACTIVITIES')
             activities = page_content[activities_index + 1:]
+
+            if 'CERTIFICATIONS' in activities:
+                activities_index = activities.index('CERTIFICATIONS')
+                activities = activities[:activities_index]
+
             resume_content['CO/EXTRA-CURRICULAR ACTIVITIES'] = activities
+
 
         if 'CERTIFICATIONS' in page_content:
             certifications_index = page_content.index('CERTIFICATIONS')
             certifications = page_content[certifications_index + 1:]
-            certifications = ' '.join(certifications)
-            certifications = certifications.replace('/u', ', ')
-            certifications = certifications.split(',')
-            certifications = [cert.strip() for cert in certifications]
-            resume_content['CERTIFICATIONS']
+
+            resume_content['CERTIFICATIONS'] = certifications
     pdf_file.close()
 
     return resume_content
